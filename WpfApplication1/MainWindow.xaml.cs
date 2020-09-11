@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +28,59 @@ namespace WpfApplication1
             InitializeComponent();
 
         }
-
-
+        //global
         TextBox textbox1 = new TextBox();
         TextBox textbox2 = new TextBox();
         TextBox textbox3 = new TextBox();
         ListBox listbox = new ListBox();
 
+        private Employee[] phonebook = new Employee[1];
+
+        private void Write(Employee obj)
+        {
+            StreamWriter sw = new StreamWriter("Contacts.txt");
+            sw.WriteLine(phonebook.Length + 1);
+            sw.WriteLine(obj.FirstName);
+            sw.WriteLine(obj.LastName);
+            sw.WriteLine(obj.Phone);
+            for (int i = 0; i < phonebook.Length; i++)
+            {
+                sw.WriteLine(phonebook[i].FirstName);
+                sw.WriteLine(phonebook[i].LastName);
+                sw.WriteLine(phonebook[i].Phone);
+            }
+            sw.Close(); 
+        }
+
+        private void Read()
+        {
+            StreamReader sr = new StreamReader("Contacts.txt");
+            phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
+            for (int x= 0; x <phonebook.Length; x++)
+            {
+                phonebook[x] = new Employee();
+                phonebook[x].FirstName = sr.ReadLine();
+                phonebook[x].LastName = sr.ReadLine();
+                phonebook[x].Phone = sr.ReadLine();
+            }
+        }
+
+        private void Dispaly()
+        {
+            listbox.Items.Clear();
+            for (int t = 0; t < phonebook.Length; t++)
+            {
+                listbox.Items.Add(phonebook[t].ToString());
+            }
+        }
+
+        private void ClearFields()
+        {
+            textbox1.Text = String.Empty;
+            textbox2.Text = String.Empty;
+            textbox3.Text = String.Empty;
+        }
+       
 
         public class User
         {
@@ -41,7 +88,6 @@ namespace WpfApplication1
             public string name { get; set;}
             public string location { get; set; }
         }
-
 
         private void txtblock_Loaded(object sender, RoutedEventArgs e)
         {
@@ -108,11 +154,8 @@ namespace WpfApplication1
 
             }
 
-
-
-
-            for (int i = 1; i < 4; i++)
-            {
+       for (int i = 1; i < 4; i++)
+           {
 
                 if (i == 1)
                 { 
@@ -145,124 +188,8 @@ namespace WpfApplication1
             grild1.Children.Add(textbox2);
             grild1.Children.Add(textbox3);
 
-            //Array array = Array.CreateInstance(typeof(string), 2,4);
-            //array.SetValue("ahmad", 0,0);
-            //array.SetValue("amir", 0,1);
-            //array.SetValue("mohammad", 0, 2);
-            //array.SetValue("mihan",0, 3);
-            //array.SetValue("samin", 1, 0);
-            //array.SetValue("sara", 1, 1);
-            //array.SetValue("yashar", 1, 2);
-            //array.SetValue("sina", 1, 3);
-
-            //int x = array.GetLength(0);
-            //int y = array.GetLength(1);
-
-            //for (int i = 0; i < x; i++)
-            //{
-            //    for (int j = 0; j < y; j++)
-            //    {
-            //   MessageBox.Show($"{i.ToString()}, {j.ToString()}:{array.GetValue(i, j)}");
-            //    }
-            //}
-
-
-
-            Array arra1 = Array.CreateInstance(typeof(int), 4);
-            arra1.SetValue(0, 0);
-            arra1.SetValue(1, 1);
-            arra1.SetValue(2, 2);
-            arra1.SetValue(3, 3);
-
-            //Array arra2 = Array.CreateInstance(typeof(object), 5);
-            //Array.Copy(arra1, arra1.GetLowerBound(0), arra2, arra2.GetLowerBound(0), 4);
-            //int x = arra2.GetUpperBound(0);
-            //for(int i=0; i<x; i++)
-            //{
-            //    MessageBox.Show(arra2.GetValue(i).ToString());
-            //}
-
-
-            Array oddArray = Array.CreateInstance(typeof(Int32), 5);
-            oddArray.SetValue(1, 0);
-            oddArray.SetValue(3, 1);
-            oddArray.SetValue(5, 2);
-            oddArray.SetValue(7, 3);
-            oddArray.SetValue(9, 4);
-            // Creates and initializes a new Array of type Object.  
-            Array objArray = Array.CreateInstance(typeof(object), 5);
-            Array.Copy(oddArray, oddArray.GetLowerBound(0) + 1, objArray, objArray.GetLowerBound(0) +1,4);
-            int items1 = objArray.GetUpperBound(0);
-           // for (int i = 1; i <= items1; i++) MessageBox.Show(objArray.GetValue(i).ToString());
-            //Int32[] cloneArray = (Int32[])oddArray.Clone();
-            // foreach(var x in cloneArray)
-            //{
-            //    MessageBox.Show(x.ToString());
-            //}
-
-
-            //object[] arrayy ;
-            //arrayy = new object[] { 1, "ahmad", 'a', 3.526 , null};
-            //foreach (var item in arrayy)
-            //{
-            //    MessageBox.Show(item.ToString());
-            //}
-
-            List<int> lst = new List<int>();
-            lst.Add(1);
-            lst.Add(2);
-            lst.Add(3);
-            List<int> lst2 = new List<int>();
-            lst2.AddRange(lst);
-            //foreach (var item in lst2)
-            //{
-            //    MessageBox.Show(item.ToString());
-            //}
-
-            List<User> lst3 = new List<User>()
-            {
-                new User {Id=1, name="hgh", location="gfttru" },
-                new User {Id=2, name="ttyry", location="ewerwre" }
-            };
-
-            lst3.Add(new User { Id = 3, name = "wwrwr", location = "wewqe" });
-            //MessageBox.Show(lst[1]);
-
-            //MessageBox.Show((lst3.Capacity).ToString());
-            lst.Insert(1, 5);
-
-
-            List<int> lst4 = new List<int>() { 20, 30 };
-            lst.InsertRange(2, lst4);
-
-            //MessageBox.Show((lst.Contains(5)).ToString());
-            //foreach (var item in lst)
-            //{
-            //    MessageBox.Show(item.ToString());
-            //}
-
-
-            //for (int i = 0; i < lst3.Count; i++)
-            //{
-            //    MessageBox.Show($"Id:{lst3[i].Id}, name:{lst3[i].name}, location:{lst3[i].location}");
-            //}
-            //foreach (var item in lst3)
-            //{
-            //    MessageBox.Show($"Id:{item.Id}, name:{item.name}, location:{item.location}");
-            //}
-
-
-            // MessageBox.Show((lst.Count).ToString());
-            // MessageBox.Show((lst.Capacity).ToString());
-            //foreach (var item in lst)
-            //{
-            //    MessageBox.Show(item.ToString());
-            //}
-
-
-
-
-
+            Read();
+           Dispaly();
         }
 
 
@@ -273,10 +200,14 @@ namespace WpfApplication1
             employ.FirstName = textbox1.Text;
             employ.LastName = textbox2.Text;
             employ.Phone = textbox3.Text;
-            listbox.Items.Add(employ.ToString());
+            Write(employ);
+            Read();
+            Dispaly();
+            ClearFields();
+       
 
         }
 
     }
-    }
+}
 
