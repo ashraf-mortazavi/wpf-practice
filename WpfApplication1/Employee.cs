@@ -82,9 +82,13 @@ namespace WpfApplication1
             }
             return output;
         }
+<<<<<<< Updated upstream
         //public override bool Equals(Object objA)
         //{
         //    return ((Employee)objA).firstName.Equals(((Employee)objA).lastName);
         //}
+=======
+       
+>>>>>>> Stashed changes
     }
 }

@@ -39,9 +39,12 @@ namespace WpfApplication1
         Employee e2 = new Employee();
         List<Employee> phonebook1 = new List<Employee>();
        
+<<<<<<< Updated upstream
         
         
         
+=======
+>>>>>>> Stashed changes
         //private Employee[] phonebook = new Employee[1];
 
         private void Write(Employee obj)
@@ -85,6 +88,7 @@ namespace WpfApplication1
                 phonebook1.Add(item);
 
             }
+<<<<<<< Updated upstream
             
 
             //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
@@ -95,7 +99,19 @@ namespace WpfApplication1
             //    phonebook[x].LastName = sr.ReadLine();
             //    phonebook[x].Phone = sr.ReadLine();
             //}
+=======
+
+>>>>>>> Stashed changes
             sr.Close();
+            //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
+            //for (int x= 0; x <phonebook.Length; x++)
+            //{
+            //    phonebook[x] = new Employee();
+            //    phonebook[x].FirstName = sr.ReadLine();
+            //    phonebook[x].LastName = sr.ReadLine();
+            //    phonebook[x].Phone = sr.ReadLine();
+            //}
+
         }
 
         private void Dispaly()
