@@ -77,6 +77,21 @@ namespace WpfApplication1
            output += string.Format("({0}) {1}-{2}", Phone.Substring(0, 3), Phone.Substring(3, 3), Phone.Substring(6, 4));
             return output;
         }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< Updated upstream
+        //public override bool Equals(Object objA)
+        //{
+        //    return ((Employee)objA).firstName.Equals(((Employee)objA).lastName);
+        //}
+=======
+       
+>>>>>>> Stashed changes
+>>>>>>> feature/Solution-#1
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
     }
 }

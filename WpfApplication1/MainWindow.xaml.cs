@@ -37,14 +37,20 @@ namespace WpfApplication1
 <<<<<<< HEAD
         private Employee[] phonebook = new Employee[1];
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
         Employee e2 = new Employee();
         List<Employee> phonebook1 = new List<Employee>();
        
 
         //private Employee[] phonebook = new Employee[1];
+<<<<<<< HEAD
        
        
+=======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
 >>>>>>> feature/Solution-#1
 
         private void Write(Employee obj)
@@ -100,6 +106,7 @@ namespace WpfApplication1
                 phonebook[x].LastName = sr.ReadLine();
                 phonebook[x].Phone = sr.ReadLine();
             }
+<<<<<<< HEAD
             sr.Close();
 =======
 
@@ -116,6 +123,25 @@ namespace WpfApplication1
 
             }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+            
+
+            //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
+            //for (int x= 0; x <phonebook.Length; x++)
+            //{
+            //    phonebook[x] = new Employee();
+            //    phonebook[x].FirstName = sr.ReadLine();
+            //    phonebook[x].LastName = sr.ReadLine();
+            //    phonebook[x].Phone = sr.ReadLine();
+            //}
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> feature/Solution-#1
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
             sr.Close();
             //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
             //for (int x= 0; x <phonebook.Length; x++)
