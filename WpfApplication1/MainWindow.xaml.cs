@@ -34,11 +34,23 @@ namespace WpfApplication1
         TextBox textbox3 = new TextBox();
         ListBox listbox = new ListBox();
 
+<<<<<<< HEAD
         private Employee[] phonebook = new Employee[1];
+=======
+
+        Employee e2 = new Employee();
+        List<Employee> phonebook1 = new List<Employee>();
+       
+
+        //private Employee[] phonebook = new Employee[1];
+       
+       
+>>>>>>> feature/Solution-#1
 
         private void Write(Employee obj)
         {
             StreamWriter sw = new StreamWriter("ListContact.txt");
+<<<<<<< HEAD
             sw.WriteLine(phonebook.Length + 1);
             sw.WriteLine(obj.FirstName);
             sw.WriteLine(obj.LastName);
@@ -49,11 +61,36 @@ namespace WpfApplication1
                 sw.WriteLine(phonebook[i].LastName);
                 sw.WriteLine(phonebook[i].Phone);
             }
+=======
+            if (obj != null)
+            { phonebook1.Add(obj); }
+            else phonebook1.Add(e2);
+
+            foreach (var item in phonebook1)
+            {
+                sw.WriteLine(item.FirstName);
+                sw.WriteLine(item.LastName);
+                sw.WriteLine(item.Phone);
+            }
+            
+            
+            //sw.WriteLine(phonebook.Length + 1);
+            //sw.WriteLine(obj.FirstName);
+            //sw.WriteLine(obj.LastName);
+            //sw.WriteLine(obj.Phone);
+            //for (int i = 0; i < phonebook.Length; i++)
+            //{
+            //    sw.WriteLine(phonebook[i].FirstName);
+            //    sw.WriteLine(phonebook[i].LastName);
+            //    sw.WriteLine(phonebook[i].Phone);
+            //}
+>>>>>>> feature/Solution-#1
             sw.Close(); 
         }
 
         private void Read()
         {
+<<<<<<< HEAD
             StreamReader sr = new StreamReader("ListContact.txt");
             phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
             for (int x= 0; x <phonebook.Length; x++)
@@ -64,12 +101,43 @@ namespace WpfApplication1
                 phonebook[x].Phone = sr.ReadLine();
             }
             sr.Close();
+=======
+
+            StreamReader sr = new StreamReader("AddContacts.txt");
+            phonebook1.Clear();
+            while (sr.Peek() != -1)
+            {
+                var item = new Employee();
+                item.FirstName = sr.ReadLine();
+                item.LastName = sr.ReadLine();
+                item.Phone = sr.ReadLine();
+                phonebook1.Add(item);
+
+
+            }
+
+            sr.Close();
+            //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
+            //for (int x= 0; x <phonebook.Length; x++)
+            //{
+            //    phonebook[x] = new Employee();
+            //    phonebook[x].FirstName = sr.ReadLine();
+            //    phonebook[x].LastName = sr.ReadLine();
+            //    phonebook[x].Phone = sr.ReadLine();
+            //}
+
+>>>>>>> feature/Solution-#1
         }
 
         private void Dispaly()
         {
             listbox.Items.Clear();
+<<<<<<< HEAD
             for (int t = 0; t < phonebook.Length; t++)
+=======
+
+            foreach (var item in phonebook1)
+>>>>>>> feature/Solution-#1
             {
                 listbox.Items.Add(phonebook[t].ToString());
             }
