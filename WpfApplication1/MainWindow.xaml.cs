@@ -36,41 +36,13 @@ namespace WpfApplication1
         TextBox textbox3 = new TextBox();
         ListBox listbox = new ListBox();
 
-<<<<<<< Updated upstream
+
         Employee e2 = new Employee();
         List<Employee> phonebook1 = new List<Employee>();
        
-<<<<<<< Updated upstream
-        
-        
-        
-=======
->>>>>>> Stashed changes
+
         //private Employee[] phonebook = new Employee[1];
-
-        private void Write(Employee obj)
-        {
-            
-            StreamWriter sw = new StreamWriter("AddContacts.txt");
-            if (obj != null)
-            { phonebook1.Add(obj); }
-            else phonebook1.Add(e2);
-            //sw.WriteLine(phonebook.Length + 1);
-            //sw.WriteLine(obj.FirstName);
-            //sw.WriteLine(obj.LastName);
-            //sw.WriteLine(obj.Phone);
-            //for (int i = 0; i < phonebook.Length; i++)
-            //{
-            //    sw.WriteLine(phonebook[i].FirstName);
-            //    sw.WriteLine(phonebook[i].LastName);
-            //    sw.WriteLine(phonebook[i].Phone);
-            //}
-
-            //sw.WriteLine(phonebook1.Count + 1);
-=======
-        //  private Employee[] phonebook = new Employee[1];
-        Employee e2 = new Employee();
-        List<Employee> phonebook1 = new List<Employee>();
+       
        
 
         private void Write(Employee obj)
@@ -79,7 +51,7 @@ namespace WpfApplication1
             if (obj != null)
             { phonebook1.Add(obj); }
             else phonebook1.Add(e2);
->>>>>>> Stashed changes
+
             foreach (var item in phonebook1)
             {
                 sw.WriteLine(item.FirstName);
@@ -103,45 +75,20 @@ namespace WpfApplication1
 
         private void Read()
         {
-<<<<<<< Updated upstream
+
             StreamReader sr = new StreamReader("AddContacts.txt");
             phonebook1.Clear();
             while (sr.Peek() != -1)
-=======
-            StreamReader sr = new StreamReader("ListContact.txt");
-            phonebook1.Clear();
-            while(sr.Peek() != -1)
->>>>>>> Stashed changes
             {
                 var item = new Employee();
                 item.FirstName = sr.ReadLine();
                 item.LastName = sr.ReadLine();
                 item.Phone = sr.ReadLine();
                 phonebook1.Add(item);
-<<<<<<< Updated upstream
+
 
             }
-<<<<<<< Updated upstream
-            
 
-=======
-            }
-            
->>>>>>> Stashed changes
-            //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
-            //for (int x= 0; x <phonebook.Length; x++)
-            //{
-            //    phonebook[x] = new Employee();
-            //    phonebook[x].FirstName = sr.ReadLine();
-            //    phonebook[x].LastName = sr.ReadLine();
-            //    phonebook[x].Phone = sr.ReadLine();
-            //}
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             sr.Close();
             //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
             //for (int x= 0; x <phonebook.Length; x++)
@@ -157,10 +104,7 @@ namespace WpfApplication1
         private void Dispaly()
         {
             listbox.Items.Clear();
-<<<<<<< Updated upstream
-            //phonebook1.Add(obj);
-=======
->>>>>>> Stashed changes
+
             foreach (var item in phonebook1)
             {
                 listbox.Items.Add(item.ToString());
