@@ -81,8 +81,11 @@ namespace WpfApplication1
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
 <<<<<<< Updated upstream
         //public override bool Equals(Object objA)
         //{
@@ -92,6 +95,9 @@ namespace WpfApplication1
        
 >>>>>>> Stashed changes
 >>>>>>> feature/Solution-#1
+<<<<<<< HEAD
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
+=======
 >>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
     }
 }

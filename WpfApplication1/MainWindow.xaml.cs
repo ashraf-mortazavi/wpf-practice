@@ -38,7 +38,10 @@ namespace WpfApplication1
         private Employee[] phonebook = new Employee[1];
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
 =======
 >>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
         Employee e2 = new Employee();
@@ -47,8 +50,11 @@ namespace WpfApplication1
 
         //private Employee[] phonebook = new Employee[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
        
        
+=======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
 =======
 >>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
 >>>>>>> feature/Solution-#1
@@ -107,6 +113,7 @@ namespace WpfApplication1
                 phonebook[x].Phone = sr.ReadLine();
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             sr.Close();
 =======
 
@@ -126,6 +133,8 @@ namespace WpfApplication1
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
+=======
 <<<<<<< Updated upstream
             
 
@@ -141,6 +150,9 @@ namespace WpfApplication1
 
 >>>>>>> Stashed changes
 >>>>>>> feature/Solution-#1
+<<<<<<< HEAD
+>>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
+=======
 >>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
             sr.Close();
             //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
