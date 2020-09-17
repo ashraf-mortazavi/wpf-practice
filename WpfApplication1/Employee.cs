@@ -46,7 +46,7 @@ namespace WpfApplication1
             set
             {
 
-                if (value.Length == 10)
+                if (value.Length == 10 && value != null && value != "")
                 {
                     phone = value;
                 }
@@ -74,30 +74,12 @@ namespace WpfApplication1
         {
             string output = string.Empty;
             output += string.Format("{0}, {1}", LastName, FirstName);
-           output += string.Format("({0}) {1}-{2}", Phone.Substring(0, 3), Phone.Substring(3, 3), Phone.Substring(6, 4));
-            return output;
+            if (Phone != null || Phone != "")
+            {
+                output += string.Format("({0}) {1}-{2}", Phone.Substring(0, 3), Phone.Substring(3, 3), Phone.Substring(6, 4));
+            }
+                return output;
         }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
-<<<<<<< Updated upstream
-        //public override bool Equals(Object objA)
-        //{
-        //    return ((Employee)objA).firstName.Equals(((Employee)objA).lastName);
-        //}
-=======
-       
->>>>>>> Stashed changes
->>>>>>> feature/Solution-#1
-<<<<<<< HEAD
->>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
-=======
->>>>>>> 248f95f6aac75b7f3c34276a0b3ac18f6addc2cb
     }
 }
