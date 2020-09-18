@@ -44,7 +44,7 @@ namespace WpfApplication1
 
         private void Write(Employee obj)
         {
-            StreamWriter sw = new StreamWriter("ListContact.txt");
+            StreamWriter sw = new StreamWriter("AddContacts.txt");
 
          
             if (obj != null)
