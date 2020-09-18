@@ -44,9 +44,8 @@ namespace WpfApplication1
 
         private void Write(Employee obj)
         {
-            StreamWriter sw = new StreamWriter("ListContact.txt");
 
-         
+            StreamWriter sw = new StreamWriter("ListContact.txt");
             if (obj != null)
             { phonebook1.Add(obj); }
             else phonebook1.Add(e2);
@@ -75,7 +74,6 @@ namespace WpfApplication1
 
         private void Read()
         {
-
             StreamReader sr = new StreamReader("AddContacts.txt");
             phonebook1.Clear();
             while (sr.Peek() != -1)
@@ -88,6 +86,7 @@ namespace WpfApplication1
 
 
             }
+
             //phonebook = new Employee[Convert.ToInt32(sr.ReadLine())];
             //for (int x= 0; x <phonebook.Length; x++)
             //{
@@ -224,6 +223,7 @@ namespace WpfApplication1
             grild1.Children.Add(textbox1);
             grild1.Children.Add(textbox2);
             grild1.Children.Add(textbox3);
+
             Read();
            Dispaly();
         }
