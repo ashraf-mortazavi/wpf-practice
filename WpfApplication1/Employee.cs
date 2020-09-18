@@ -46,7 +46,7 @@ namespace WpfApplication1
             set
             {
 
-                if (value.Length == 10 && value != null && value != "")
+                if (value.Length == 10 )
                 {
                     phone = value;
                 }
@@ -73,11 +73,8 @@ namespace WpfApplication1
         public override string ToString()
         {
             string output = string.Empty;
-            output += string.Format("{0}, {1}", LastName, FirstName);
-            if (Phone != null || Phone != "")
-            {
-                output += string.Format("({0}) {1}-{2}", Phone.Substring(0, 3), Phone.Substring(3, 3), Phone.Substring(6, 4));
-            }
+            output += string.Format("{0}, {1}", LastName, FirstName);           
+            output += string.Format("({0}) {1}-{2}", Phone.Substring(0, 3), Phone.Substring(3, 3), Phone.Substring(6, 4));
                 return output;
         }
 
